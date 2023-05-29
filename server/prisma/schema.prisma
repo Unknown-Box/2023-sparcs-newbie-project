@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  uuid String @id @default(uuid())
+  email String @unique
+  nickname String
+  password String
+  session Session[]
+  playlist Playlist?
+}
+
+model Session {
+  uuid String @id @default(uuid())
+  user User @relation(fields: [user_id], references: [uuid])
+  user_id String 
+}
+
+model Playlist {
+  uuid String @id @default(uuid())
+  owner User @relation(fields: [owner_id], references: [uuid])
+  owner_id String @unique
+  musics Music[]
+}
+
+model Music {
+  uuid String @id @default(uuid())
+  playlist Playlist @relation(fields: [playlist_id], references: [uuid])
+  playlist_id String
+  title String
+  artist String
+  created_at DateTime @default(now())
+}

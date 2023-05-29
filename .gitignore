@@ -1,0 +1,11 @@
+# ssh key
+otlplus-nest-hw.pem
+
+# dotenv
+.env
+
+# npm
+node_modules/
+
+# build files
+server/dist/

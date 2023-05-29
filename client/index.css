@@ -1,0 +1,229 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+:is(#signin, #signup) {
+  width: 384px;
+  border: 4px solid black;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 0px #333;
+  background-color: #ccc;
+}
+
+:is(#signin, #signup) h1 {
+  margin-top: 32px;
+  color: black;
+}
+
+:is(#signin, #signup) form > div {
+  width: 320px;
+  margin-bottom: 16px;
+}
+
+:is(#signin, #signup) form > div h2 {
+  width: 256px;
+  margin: auto;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+:is(#signin, #signup) form > div input {
+  width: 256px;
+  padding: 8px 8px;
+  border: 2px solid black;
+  border-radius: 0;
+  margin: auto;
+  font-size: 16px;
+  display: block;
+  box-shadow: 4px 4px 0px #333;
+}
+
+:is(#signin, #signup) form > div:last-child {
+  width: 256px;
+  margin: auto;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+:is(#signin, #signup) form > div:last-child button {
+  width: 96px;
+  height: 32px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 14px;
+  box-shadow: 4px 4px 0px #333;
+}
+
+:is(#signin, #signup) form > div:last-child button:hover {
+  cursor: pointer;
+}
+
+:is(#signin, #signup) form > div:last-child div:last-child button {
+  border: 2px solid black;
+  color: black;
+  background-color: #ccc;
+}
+
+#playlist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+#playlist-container h1 {
+  color: black;
+}
+
+#playlist-container #toolbar {
+  width: 480px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+#playlist-container #toolbar div:first-child {
+  margin-right: 12px;
+}
+
+#playlist-container #toolbar div button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid black;
+  margin: 0;
+  background-color: white;
+  font-size: 14px;
+  box-shadow: 4px 4px 0px #333;
+}
+
+#playlist-container #toolbar div button:hover {
+  cursor: pointer;
+}
+
+#playlist-container #playlist .row {
+  width: 480px;
+  height: 36px;
+  padding: 4px 8px;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 32px 3fr 2fr 32px 32px;
+  box-shadow: 4px 4px 0px #333;
+}
+
+#playlist-container #playlist .row:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+#playlist-container #playlist .row > .col {
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+}
+
+#playlist-container #playlist .row > .col:is(:first-child, :last-child) {
+  justify-content: center;
+}
+
+#playlist-container #playlist .row > .col > a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#playlist-container #playlist .row > .col > a:hover {
+  cursor: pointer;
+}
+
+#playlist-container #playlist .row > .col > a:visited {
+  color: black;
+}
+
+#add-music {
+  width: 384px;
+  border: 4px solid black;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 0px #333;
+  background-color: #ccc;
+}
+
+#add-music h1 {
+  margin-top: 32px;
+  color: black;
+}
+
+#add-music form > div {
+  width: 320px;
+  margin-bottom: 16px;
+}
+
+#add-music form > div h2 {
+  width: 256px;
+  margin: auto;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+#add-music form > div input {
+  width: 256px;
+  padding: 8px 8px;
+  border: 2px solid black;
+  border-radius: 0;
+  margin: auto;
+  font-size: 16px;
+  display: block;
+  box-shadow: 4px 4px 0px #333;
+}
+
+#add-music form > div:last-child {
+  width: 256px;
+  margin: auto;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#add-music form > div:last-child button {
+  width: 96px;
+  height: 32px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 14px;
+  box-shadow: 4px 4px 0px #333;
+}
+
+#add-music form > div:last-child button:hover {
+  cursor: pointer;
+}
+
+#add-music form > div:last-child div:last-child button {
+  border: 2px solid black;
+  color: black;
+  background-color: #ccc;
+}
